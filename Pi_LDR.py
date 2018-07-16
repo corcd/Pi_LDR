@@ -17,9 +17,9 @@ try:
     while True:
         v = GPIO.input(Pin)
         if v == GPIO.LOW:
-            print("低亮度")
+            print("LOW")
         if v == GPIO.HIGH:
-            print("高亮度")
+            print("HIGH")
         time.sleep(2)
 
 except KeyboardInterrupt:
