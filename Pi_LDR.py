@@ -16,6 +16,7 @@ try:
     i = 0
     while True:
         v = GPIO.input(Pin)
+        print(v)
         if v == GPIO.LOW:
             print("LOW")
         if v == GPIO.HIGH:
