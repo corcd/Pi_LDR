@@ -13,6 +13,7 @@ GPIO.output(Pin, GPIO.HIGH)
 GPIO.setup(Pin, GPIO.IN)
 
 try:
+    print("LDR Online")
     i = 0
     while True:
         v = GPIO.input(Pin)
@@ -23,5 +24,7 @@ try:
             print("HIGH")
         time.sleep(2)
 
-except KeyboardInterrupt:
+except (KeyboardInterrupt, SystemExit):
+    GPIO.cleanup()
+    print("LDR Outline")
     pass
